@@ -1,0 +1,13 @@
+name: Setup C
+on:
+  workflow_dispatch:
+jobs:
+  setup-c:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install GCC
+        run: |
+          sudo apt update
+          sudo apt install -y build-essential
+      - name: Verify GCC Installation
+        run: gcc --version
